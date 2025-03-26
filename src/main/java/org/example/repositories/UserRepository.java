@@ -73,7 +73,7 @@ public class UserRepository {
 
     public void save() {
         try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_NAME))) {
-            users.forEach(v -> pw.println(v.toCSV()));
+            users.forEach(u -> pw.println(u.toCSV()));
         } catch (IOException e) {
             System.out.println("Error in writing to file");
         }

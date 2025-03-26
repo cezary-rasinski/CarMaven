@@ -47,6 +47,6 @@ public class User {
     }
 
     public String toCSV() {
-        return String.join(";", login, password, role, (CharSequence) userVehicle);
+        return String.join(";", login, password, role, (userVehicle != null ? userVehicle.getId() : "null"));
     }
 }
